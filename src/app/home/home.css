@@ -1,0 +1,60 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 60px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,.1);
+}
+
+.logo {
+  color: #12b3b6;
+}
+
+.navbar nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px;
+  background: #e9f3f3;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+}
+
+.hero-text span {
+  color: #12b3b6;
+}
+
+.btn-primary {
+  background: #12b3b6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+}
+
+.btn-outline {
+  border: 2px solid #12b3b6;
+  padding: 10px 20px;
+  background: transparent;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+}
+
+.carousel img {
+  width: 420px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin: 0 10px;
+}

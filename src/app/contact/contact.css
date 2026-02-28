@@ -1,0 +1,13 @@
+.contact {
+  padding: 80px;
+  text-align: center;
+  background: #e9f3f3;
+}
+
+.btn {
+  background: #12b3b6;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 8px;
+}

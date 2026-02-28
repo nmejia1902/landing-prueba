@@ -1,0 +1,31 @@
+<section id="services" class="services">
+
+  <h2>Nuestros Servicios</h2>
+
+  <p class="subtitle">
+    Ofrecemos soluciones tecnológicas completas para empresas
+    que buscan optimizar su infraestructura y seguridad
+  </p>
+
+  <!-- CARDS -->
+  <div class="services-grid">
+
+    <div class="service-card" *ngFor="let s of services">
+      <div class="icon">{{s.icon}}</div>
+      <h3>{{s.title}}</h3>
+      <p>{{s.desc}}</p>
+    </div>
+
+  </div>
+
+  <!-- GALERIA -->
+  <div class="gallery">
+
+    <div class="gallery-card" *ngFor="let g of gallery">
+      <img [src]="g.img" />
+      <div class="overlay">{{g.title}}</div>
+    </div>
+
+  </div>
+
+</section>

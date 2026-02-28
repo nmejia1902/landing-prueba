@@ -1,0 +1,34 @@
+<header class="navbar">
+  <h2 class="logo">Cyber Space Solutions</h2>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#services">Servicios</a>
+    <a href="#contact">Contacto</a>
+  </nav>
+</header>
+
+<section class="hero">
+
+  <div class="hero-text">
+    <h1>
+      Soluciones Tecnológicas<br>
+      <span>Integrales</span>
+    </h1>
+
+    <p>
+      Transformamos tu infraestructura tecnológica con servicios
+      profesionales de redes, soporte y seguridad.
+    </p>
+
+    <button class="btn-primary">Ver Servicios</button>
+    <button class="btn-outline">Contactar</button>
+  </div>
+
+  <div class="carousel">
+    <button (click)="prev()">❮</button>
+    <img [src]="images[current]" />
+    <button (click)="next()">❯</button>
+  </div>
+
+</section>
