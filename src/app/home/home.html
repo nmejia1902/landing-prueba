@@ -1,3 +1,4 @@
+<!-- NAVBAR -->
 <header class="navbar">
   <h2 class="logo">Cyber Space Solutions</h2>
 
@@ -8,27 +9,43 @@
   </nav>
 </header>
 
+
+<!-- HERO MODERNO -->
 <section class="hero">
 
-  <div class="hero-text">
-    <h1>
-      Soluciones Tecnológicas<br>
-      <span>Integrales</span>
-    </h1>
+  <h1>
+    Soluciones Tecnológicas<br>
+    <span>Integrales</span>
+  </h1>
 
-    <p>
-      Transformamos tu infraestructura tecnológica con servicios
-      profesionales de redes, soporte y seguridad.
-    </p>
+  <p class="subtitle">
+    Transformamos tu infraestructura tecnológica con servicios
+    profesionales de redes, soporte y seguridad.
+  </p>
 
+  <div class="buttons">
     <button class="btn-primary">Ver Servicios</button>
     <button class="btn-outline">Contactar</button>
   </div>
 
+  <!-- CAROUSEL GRANDE -->
   <div class="carousel">
-    <button (click)="prev()">❮</button>
+
+    <button class="arrow" (click)="prev()">❮</button>
+
     <img [src]="images[current]" />
-    <button (click)="next()">❯</button>
+
+    <button class="arrow" (click)="next()">❯</button>
+
+  </div>
+
+  <!-- INDICADORES -->
+  <div class="dots">
+    <span
+      *ngFor="let img of images; let i = index"
+      [class.active]="i === current"
+      (click)="current = i">
+    </span>
   </div>
 
 </section>
