@@ -1,13 +1,44 @@
-.contact {
-  padding: 80px;
-  text-align: center;
-  background: #e9f3f3;
+.contact{
+
+  padding:100px 20px;
+
+  text-align:center;
+
+  background:#f8fafc;
+
 }
 
-.btn {
-  background: #12b3b6;
-  color: white;
-  padding: 15px 25px;
-  border: none;
-  border-radius: 8px;
+.contact h2{
+
+  font-size:34px;
+
+  margin-bottom:40px;
+
+}
+
+
+/* ICONO WHATSAPP */
+
+.whatsapp-container{
+
+  display:flex;
+
+  justify-content:center;
+
+}
+
+.whatsapp-icon{
+
+  width:70px;
+
+  cursor:pointer;
+
+  transition:0.3s;
+
+}
+
+.whatsapp-icon:hover{
+
+  transform:scale(1.1);
+
 }

@@ -1,51 +1,55 @@
-<!-- NAVBAR -->
 <header class="navbar">
-  <h2 class="logo">Cyber Space Solutions</h2>
+
+  <div class="logo">
+    <img src="assets/Logo.png" alt="logo">
+     Cyber Space Solutions
+  </div>
 
   <nav>
     <a href="#">Home</a>
     <a href="#services">Servicios</a>
     <a href="#contact">Contacto</a>
   </nav>
+
 </header>
 
 
-<!-- HERO MODERNO -->
 <section class="hero">
 
-  <h1>
-    Soluciones Tecnológicas<br>
-    <span>Integrales</span>
-  </h1>
-
-  <p class="subtitle">
-    Transformamos tu infraestructura tecnológica con servicios
-    profesionales de redes, soporte y seguridad.
-  </p>
-
-  <div class="buttons">
-    <button class="btn-primary">Ver Servicios</button>
-    <button class="btn-outline">Contactar</button>
-  </div>
-
-  <!-- CAROUSEL GRANDE -->
   <div class="carousel">
 
-    <button class="arrow" (click)="prev()">❮</button>
+    <div class="slide">
 
-    <img [src]="images[current]" />
+      <img [src]="images[current]" />
 
-    <button class="arrow" (click)="next()">❯</button>
+      <div class="overlay"></div>
+
+      <div class="carousel-text">
+
+        <h1>Soluciones Tecnológicas Integrales</h1>
+
+        <p>
+          Infraestructura, soporte y seguridad para empresas modernas
+        </p>
+
+      </div>
+
+    </div>
+
+    <button class="arrow left" (click)="prev()">❮</button>
+    <button class="arrow right" (click)="next()">❯</button>
 
   </div>
 
-  <!-- INDICADORES -->
+
   <div class="dots">
+
     <span
       *ngFor="let img of images; let i = index"
       [class.active]="i === current"
-      (click)="current = i">
+      (click)="goToSlide(i)">
     </span>
+
   </div>
 
 </section>

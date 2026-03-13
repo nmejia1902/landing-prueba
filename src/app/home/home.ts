@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -8,15 +8,28 @@ import { CommonModule } from '@angular/common';
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit, OnDestroy {
 
   images = [
-    'https://img.freepik.com/foto-gratis/dos-empleados-oficina-sonrientes-trabajando-computadora-portatil_171337-5836.jpg?semt=ais_user_personalization&w=740&q=80',
-    'https://img.freepik.com/foto-gratis/oficina-vacia-fabrica-investigacion-desarrollo-fotovoltaica_482257-126742.jpg?semt=ais_rp_progressive&w=740&q=80',
-    'https://forcomin.com/wp-content/uploads/2024/01/3-1-1024x684-1.jpg'
+    'assets/slide1.jpg',
+    'assets/slide2.jpg',
+    'assets/slide3.jpg'
   ];
 
   current = 0;
+  intervalId: any;
+
+  ngOnInit() {
+
+    this.intervalId = setInterval(() => {
+      this.next();
+    }, 4000);
+
+  }
+
+  ngOnDestroy() {
+    clearInterval(this.intervalId);
+  }
 
   next() {
     this.current = (this.current + 1) % this.images.length;
@@ -27,4 +40,9 @@ export class HomeComponent {
       (this.current - 1 + this.images.length) %
       this.images.length;
   }
+
+  goToSlide(index: number) {
+    this.current = index;
+  }
+
 }

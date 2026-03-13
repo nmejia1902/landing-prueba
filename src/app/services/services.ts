@@ -10,41 +10,56 @@ import { CommonModule } from '@angular/common';
 })
 export class ServicesComponent {
 
+  activeIndex: number | null = null;
+
   services = [
+
     {
-      title: 'Instalaciones de Red',
-      desc: 'Instalación y configuración profesional de redes cableadas y WiFi para tu empresa.',
-      icon: '📶'
+      title: 'Instalación de Redes Estructuradas',
+      desc: 'Diseño e instalación de redes cableadas y WiFi para empresas, garantizando conectividad estable y segura.',
+      img: 'assets/redes.jpg'
     },
+
     {
-      title: 'Soporte a Equipos',
-      desc: 'Soporte técnico especializado para equipos informáticos.',
-      icon: '🖥️'
+      title: 'Consultoria  en Tecnología Informática',
+      desc: 'Asesoramos a empresas para mejorar el uso de la tecnología, optimizando procesos y ayudando a tomar decisiones estratégicas en sistemas.',
+      img: 'assets/consultoria.jpg'
     },
+
     {
-      title: 'Mantenimientos Preventivos',
-      desc: 'Mantenimientos programados para prevenir fallas y extender la vida útil.',
-      icon: '🔧'
+      title: 'Mantenimiento y Soporte Tecnico',
+      desc: 'Diagnóstico y reparación de fallas en equipos informáticos, brindando soporte técnico especializado.',
+      img: 'assets/Mantenimiento correctivo.jpg'
     },
+
     {
-      title: 'Sistemas de Seguridad',
-      desc: 'Instalación de sistemas de seguridad y vigilancia moderna.',
-      icon: '🛡️'
+      title: 'Instalación de Videovigilancia',
+      desc: 'Instalación de cámaras de seguridad y sistemas de monitoreo para proteger instalaciones empresariales.',
+      img: 'assets/camaras.jpg'
+    },
+
+    {
+      title: 'Seguridad Tecnológica',
+      desc: 'Implementación de soluciones de seguridad informática para proteger datos, redes y sistemas empresariales.',
+      img: 'assets/seguridad.jpg'
+    },
+
+    {
+      title: 'Gestion software',
+      desc: 'Atención técnica adaptada a las necesidades específicas de cada cliente y su infraestructura tecnológica.',
+      img: 'assets/gestionSoftware.jpg'
     }
+
   ];
 
-  gallery = [
-    {
-      img: 'https://microsegur.com/wp-content/uploads/2022/10/cableado-1024x683.jpg',
-      title: 'Redes Profesionales'
-    },
-    {
-      img: 'https://www.senati.edu.pe/sites/default/files/2017/carrera/11/carrera-dual-soporte-y-mantenimiento-de-equipos-de-computacion-senati1800-x-1190.jpg',
-      title: 'Soporte Especializado'
-    },
-    {
-      img: 'https://www.ubicaware.com/assets/img/mdvr.jpg',
-      title: 'Seguridad Avanzada'
+  toggleCard(index: number) {
+
+    if (this.activeIndex === index) {
+      this.activeIndex = null;
+    } else {
+      this.activeIndex = index;
     }
-  ];
+
+  }
+
 }
