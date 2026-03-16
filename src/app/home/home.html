@@ -1,55 +1,44 @@
 <header class="navbar">
-
   <div class="logo">
     <img src="assets/Logo.png" alt="logo">
-     Cyber Space Solutions
+    Cyber Space <span>Solutions</span>
   </div>
 
   <nav>
     <a href="#">Home</a>
     <a href="#services">Servicios</a>
-    <a href="#contact">Contacto</a>
+    <a href="https://wa.me/50496817350" target="_blank" class="nav-btn">Cotizar</a>
   </nav>
-
 </header>
 
-
 <section class="hero">
-
   <div class="carousel">
-
-    <div class="slide">
-
-      <img [src]="images[current]" />
-
+    <div *ngFor="let slide of slides; let i = index" 
+         class="slide" 
+         [class.active-slide]="i === current">
+      
+      <img [src]="slide.img" [alt]="slide.titleFirst" class="ken-burns-img">
       <div class="overlay"></div>
 
-      <div class="carousel-text">
-
-        <h1>Soluciones Tecnológicas Integrales</h1>
-
-        <p>
-          Infraestructura, soporte y seguridad para empresas modernas
-        </p>
-
+      <div class="carousel-text" *ngIf="i === current">
+        <span class="hero-badge">{{slide.badge}}</span>
+        <h1>{{slide.titleFirst}} <span>{{slide.titleSecond}}</span></h1>
+        <p>{{slide.desc}}</p>
+        
+        <div class="hero-buttons">
+          <button class="btn-primary" (click)="scrollTo('#services')">Explorar Soluciones</button>
+        </div>
       </div>
-
     </div>
 
     <button class="arrow left" (click)="prev()">❮</button>
     <button class="arrow right" (click)="next()">❯</button>
-
   </div>
-
 
   <div class="dots">
-
-    <span
-      *ngFor="let img of images; let i = index"
-      [class.active]="i === current"
-      (click)="goToSlide(i)">
+    <span *ngFor="let img of images; let i = index" 
+          [class.active]="i === current" 
+          (click)="goToSlide(i)">
     </span>
-
   </div>
-
 </section>
