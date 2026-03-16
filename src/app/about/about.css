@@ -47,7 +47,7 @@
 
 .stats-section {
   padding: 80px 40px;
-  background-color: #5bb3b6; /* Color turquesa de tu imagen */
+  background-color: #5bb3b6; 
   color: white; 
 }
 
@@ -110,11 +110,11 @@
   transform: translateY(-10px);
 }
 
-/* El círculo para el icono - AGRANDADO */
+
 .icon-box {
   background-color: #e0f2f2; 
-  width: 80px;  /* Ajustado a 80px */
-  height: 80px; /* Ajustado a 80px */
+  width: 80px;
+  height: 80px; 
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -122,11 +122,11 @@
   margin-bottom: 20px;
 }
 
-/* NUEVA CLASE PARA EL SVG */
+
 .svg-icon {
-  width: 35px;   /* Edita este valor para el tamaño del icono */
+  width: 35px;
   height: 35px;
-  fill: #12b3b6; /* Color Cian fuerte */
+  fill: #12b3b6; 
 }
 
 .why-card h3 {

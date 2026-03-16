@@ -1,37 +1,37 @@
 <section class="services-section" id="services">
-
+  <span class="section-badge">Soluciones Profesionales</span>
   <h2>Nuestros Servicios</h2>
-
   <p class="services-subtitle">
     Ofrecemos soluciones tecnológicas completas para empresas que buscan optimizar su infraestructura y seguridad.
   </p>
 
   <div class="services-grid">
-
     <div
       class="service-card"
       *ngFor="let service of services; let i = index"
       (click)="toggleCard(i)"
+      [class.active]="activeIndex === i"
     >
-
       <img [src]="service.img" alt="service image">
-
       <div class="image-overlay"></div>
 
-      <div class="title" [class.hide]="activeIndex === i">
-        {{service.title}}
+      <div class="service-icon-top">
+        <svg viewBox="0 0 24 24" class="svg-icon-mini"><path d="M12,2L4.5,20.29L5.21,21L12,18L18.79,21L19.5,20.29L12,2Z"/></svg>
       </div>
 
-      <div class="description" *ngIf="activeIndex === i">
+      <div class="title-container" [class.hide]="activeIndex === i">
+        <h3>{{service.title}}</h3>
+        <div class="title-line"></div>
+      </div>
 
+      <div class="description-overlay" *ngIf="activeIndex === i">
         <div class="text-wrapper">
-          {{service.desc}}
+          <p>{{service.desc}}</p>
+          <button class="service-btn" (click)="onContactClick($event, service.title)">
+            Saber más
+          </button>
         </div>
-
       </div>
-
     </div>
-
   </div>
-
 </section>
