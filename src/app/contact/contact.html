@@ -1,56 +1,52 @@
 <section id="contact" class="contact">
-
-  <h2 class="contact-title">Contacto</h2>
-
-  <div class="contact-container">
-
-    <!-- Tarjeta de información -->
-    <div class="contact-card">
-
-      <div class="info-row">
-        <span class="material-icons icon">phone</span>
-        <div>
-          <h4>Teléfono</h4>
-          <p>+504 9999-9999</p>
-        </div>
-      </div>
-
-      <div class="info-row">
-        <span class="material-icons icon">schedule</span>
-        <div>
-          <h4>Horario</h4>
-          <p>Lunes – Viernes</p>
-          <p>9:00 AM – 6:00 PM</p>
-        </div>
-      </div>
-
-      <div class="info-row">
-        <span class="material-icons icon">location_on</span>
-        <div>
-          <h4>Ubicación</h4>
-          <p>Calle Principal</p>
-          <p>La Granja, Honduras</p>
-        </div>
-      </div>
-
-      <button class="whatsapp-btn" (click)="whatsapp()">
-        <img src="assets/whatsapp.svg">
-        WhatsApp
-      </button>
-
-    </div>
-
-
-    <!-- Tarjeta del mapa -->
-    <div class="map-card">
-
-      <iframe
-        src="https://www.google.com/maps?q=La+Granja+Honduras&output=embed"
-        loading="lazy">
-      </iframe>
-
-    </div>
-
+  <div class="contact-header">
+    <h2 class="contact-title">Contáctanos</h2>
+    <p class="contact-subtitle">¿Listo para transformar tu infraestructura tecnológica? Estamos aquí para ayudarte</p>
+    
+    <button class="whatsapp-btn-top" (click)="whatsapp()">
+      <img src="assets/whatsapp.svg" alt="WhatsApp" class="whatsapp-icon">
+      Contactar por WhatsApp
+    </button>
   </div>
 
+  <div class="contact-main-grid">
+    <div class="info-cards-column">
+      
+      <div class="info-card">
+        <div class="card-header">
+          <img src="assets/telephone.svg" alt="Teléfono" class="card-title-icon">
+          <span class="card-title-text">Teléfono</span>
+        </div>
+        <p class="primary-text">+504 9999-9999</p>
+        <p class="secondary-text">Atención inmediata</p>
+      </div>
+
+      <div class="info-card">
+        <div class="card-header">
+          <img src="assets/clock.svg" alt="Horario" class="card-title-icon">
+          <span class="card-title-text">Horario</span>
+        </div>
+        <p class="primary-text">Lun - Vie: 9:00 AM - 6:00 PM</p>
+        <p class="secondary-text">Sábados: 9:00 AM - 12:00 PM</p>
+      </div>
+
+      <div class="info-card">
+        <div class="card-header">
+          <img src="assets/gps.svg" alt="Ubicación" class="card-title-icon">
+          <span class="card-title-text">Ubicación</span>
+        </div>
+        <p class="primary-text">Calle Principal, La Granja</p>
+        <p class="secondary-text">Tegucigalpa, Honduras</p>
+      </div>
+    </div>
+
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15478.41165215664!2d-87.2195094!3d14.0711105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6fa2de72d96c95%3A0x6e7880b9f2700e12!2sLa%20Granja%2C%20Tegucigalpa!5e0!3m2!1ses!2shn!4v1710000000000!5m2!1ses!2shn"
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
 </section>

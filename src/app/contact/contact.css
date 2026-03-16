@@ -1,96 +1,157 @@
-.contact{
-  padding:80px 10%;
-  background:#f5f7f8;
+.contact {
+  padding: 60px 5%;
+  background-color: #f0fafa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
 }
 
-.contact-title{
-  text-align:center;
-  margin-bottom:50px;
-  font-size:26px;
-  font-weight:600;
+.contact-header {
+  margin-bottom: 40px;
 }
 
-.contact-container{
-  display:grid;
-  grid-template-columns:380px 1fr;
-  gap:40px;
-  align-items:start;
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0a1f2c;
+  margin-bottom: 10px;
 }
 
-/* tarjeta */
-
-.contact-card{
-  background:white;
-  padding:30px;
-  border-radius:14px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+.contact-subtitle {
+  color: #555;
+  margin-bottom: 25px;
 }
 
-/* filas */
-
-.info-row{
-  display:flex;
-  gap:14px;
-  margin-bottom:22px;
+.whatsapp-btn-top {
+  background-color: #1da6a6; 
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  height: 45px;
+  box-shadow: 0 4px 15px rgba(29, 166, 166, 0.3);
+  transition: transform 0.2s;
 }
 
-.icon{
-  font-size:22px;
-  color:#1da6a6;
-  margin-top:3px;
+.whatsapp-btn-top:hover {
+  transform: translateY(-2px);
 }
 
-/* texto */
-
-.info-row h4{
-  margin:0;
-  font-size:15px;
+.whatsapp-icon {
+  width: 20px !important;          
+  height: 20px !important;         
+  object-fit: contain;  
+  flex-shrink: 0;       
+  display: block;
 }
 
-.info-row p{
-  margin:2px 0;
-  font-size:13px;
-  color:#666;
+.contact-main-grid {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: stretch;
 }
 
-/* botón */
-
-.whatsapp-btn{
-  margin-top:10px;
-  width:100%;
-  padding:10px;
-  border:none;
-  background:#25D366;
-  color:white;
-  border-radius:8px;
-  cursor:pointer;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  font-size:14px;
+.info-cards-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.whatsapp-btn img{
-  width:18px;
+.info-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: 0.3s;
 }
 
-/* mapa */
-
-.map-card iframe{
-  width:100%;
-  height:420px;
-  border:0;
-  border-radius:14px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+.info-card:hover {
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* responsive */
-
-@media (max-width:900px){
-
-.contact-container{
-  grid-template-columns:1fr;
+.card-header {
+  margin-bottom: 10px;
+  display: flex; 
+  align-items: center;
+  gap: 12px;
 }
 
+.card-title-icon {
+  width: 24px !important;
+  height: 24px !important;
+  object-fit: contain;
+  display: block;
+}
+
+.card-title-text {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0a1f2c;
+}
+
+.primary-text {
+  font-weight: 600;
+  margin: 5px 0;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.secondary-text {
+  color: #888;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.map-container {
+  width: 100%;
+  min-height: 450px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 900px) {
+  .contact-main-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .map-container {
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-title-text {
+    display: none;
+  }
+
+  .card-title-icon {
+    width: 32px !important;
+    height: 32px !important;
+    padding: 8px;
+    background-color: #1da6a6;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+
+  .info-card {
+    align-items: center;
+    text-align: center;
+  }
 }
