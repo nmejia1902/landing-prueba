@@ -1,15 +1,55 @@
 <section id="contact" class="contact">
 
-  <h2>Contáctanos</h2>
+  <h2 class="contact-title">Contacto</h2>
 
-  <div class="whatsapp-container">
+  <div class="contact-container">
 
-    <img
-      src="assets/whatsapp.svg"
-      alt="WhatsApp"
-      class="whatsapp-icon"
-      (click)="whatsapp()"
-    >
+    <!-- Tarjeta de información -->
+    <div class="contact-card">
+
+      <div class="info-row">
+        <span class="material-icons icon">phone</span>
+        <div>
+          <h4>Teléfono</h4>
+          <p>+504 9999-9999</p>
+        </div>
+      </div>
+
+      <div class="info-row">
+        <span class="material-icons icon">schedule</span>
+        <div>
+          <h4>Horario</h4>
+          <p>Lunes – Viernes</p>
+          <p>9:00 AM – 6:00 PM</p>
+        </div>
+      </div>
+
+      <div class="info-row">
+        <span class="material-icons icon">location_on</span>
+        <div>
+          <h4>Ubicación</h4>
+          <p>Calle Principal</p>
+          <p>La Granja, Honduras</p>
+        </div>
+      </div>
+
+      <button class="whatsapp-btn" (click)="whatsapp()">
+        <img src="assets/whatsapp.svg">
+        WhatsApp
+      </button>
+
+    </div>
+
+
+    <!-- Tarjeta del mapa -->
+    <div class="map-card">
+
+      <iframe
+        src="https://www.google.com/maps?q=La+Granja+Honduras&output=embed"
+        loading="lazy">
+      </iframe>
+
+    </div>
 
   </div>
 
