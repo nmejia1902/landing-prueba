@@ -1,200 +1,155 @@
-/* SOBRE NOSOTROS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
 
-.about-section{
-
-  padding:100px 40px;
-
-  background:#f8fafc;
-
+.about-section, .why-section, .stats-section {
+  font-family: 'Inter', -apple-system, sans-serif;
 }
 
-.about-container{
-
-  max-width:1200px;
-
-  margin:auto;
-
-  display:grid;
-
-  grid-template-columns:1fr 1fr;
-
-  gap:60px;
-
-  align-items:center;
-
+.about-section {
+  padding: 100px 8%;
+  background: white;
 }
 
-.about-image img{
-
-  width:100%;
-
-  border-radius:14px;
-
-  box-shadow:0 10px 30px rgba(0,0,0,0.1);
-
+.about-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: center;
 }
 
-.about-text h2{
-
-  font-size:36px;
-
-  margin-bottom:20px;
-
+.about-badge {
+  color: #12b3b6;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
 }
 
-.about-text p{
-
-  font-size:17px;
-
-  line-height:1.7;
-
-  color:#475569;
-
+.about-image img {
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 }
 
-
-/* POR QUE ELEGIRNOS */
-
-.why-section{
-
-  padding:90px 40px;
-
-  text-align:center;
-
-  background:white;
-
+.about-text h2 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 15px 0 25px;
 }
 
-.why-section h2{
-
-  font-size:34px;
-
-  margin-bottom:50px;
-
+.about-text p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #475569;
 }
 
-.why-grid{
-
-  max-width:1100px;
-
-  margin:auto;
-
-  display:grid;
-
-  grid-template-columns:repeat(4,1fr);
-
-  gap:30px;
-
+.stats-section {
+  padding: 80px 40px;
+  background-color: #5bb3b6; /* Color turquesa de tu imagen */
+  color: white; 
 }
 
-.why-card{
-
-  background:#f1f5f9;
-
-  padding:30px 20px;
-
-  border-radius:12px;
-
-  transition:0.3s;
-
+.stats-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  gap: 40px;
 }
 
-.why-card:hover{
-
-  transform:translateY(-6px);
-
-  box-shadow:0 10px 25px rgba(0,0,0,0.1);
-
+.stat h3 {
+  font-size: 56px; 
+  font-weight: 800;
+  margin: 0;
+  color: white;
 }
 
-.why-card h3{
-
-  margin-bottom:10px;
-
-  color:#12b3b6;
-
+.stat p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: 400;
 }
 
-
-/* ESTADISTICAS */
-
-.stats-section{
-
-  padding:80px 40px;
-
-  background:#e9f3f3;
-
+.why-section {
+  padding: 80px 5%;
+  background-color: #f8fafc;
+  text-align: center;
 }
 
-.stats-container{
-
-  max-width:1100px;
-
-  margin:auto;
-
-  display:grid;
-
-  grid-template-columns:repeat(4,1fr);
-
-  text-align:center;
-
-  gap:30px;
-
+.section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 50px;
+  color: #0f172a;
 }
 
-.stat h3{
-
-  font-size:40px;
-
-  color:#12b3b6;
-
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.stat p{
-
-  color:#475569;
-
-  margin-top:8px;
-
+.why-card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
 }
 
-
-/* RESPONSIVE */
-
-@media(max-width:900px){
-
-  .about-container{
-
-    grid-template-columns:1fr;
-
-  }
-
-  .why-grid{
-
-    grid-template-columns:1fr 1fr;
-
-  }
-
-  .stats-container{
-
-    grid-template-columns:1fr 1fr;
-
-  }
-
+.why-card:hover {
+  transform: translateY(-10px);
 }
 
-@media(max-width:600px){
+/* El círculo para el icono - AGRANDADO */
+.icon-box {
+  background-color: #e0f2f2; 
+  width: 80px;  /* Ajustado a 80px */
+  height: 80px; /* Ajustado a 80px */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
 
-  .why-grid{
+/* NUEVA CLASE PARA EL SVG */
+.svg-icon {
+  width: 35px;   /* Edita este valor para el tamaño del icono */
+  height: 35px;
+  fill: #12b3b6; /* Color Cian fuerte */
+}
 
-    grid-template-columns:1fr;
+.why-card h3 {
+  font-size: 1.2rem;
+  color: #0f172a;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
 
-  }
+.why-card p {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
 
-  .stats-container{
+@media (max-width: 1024px) {
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-container { grid-template-columns: repeat(2, 1fr); }
+}
 
-    grid-template-columns:1fr;
-
-  }
-
+@media (max-width: 600px) {
+  .why-grid { grid-template-columns: 1fr; }
+  .stats-container { grid-template-columns: 1fr; }
+  .about-container { grid-template-columns: 1fr; }
 }
