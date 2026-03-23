@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
-/* NAVBAR - EFECTO CRISTAL */
 .navbar {
   position: fixed;
   top: 0;
@@ -9,23 +8,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 8%; /* Padding reducido para un look más fino */
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  padding: 10px 8%; 
+  
+  background: rgba(255, 255, 255, 0.6); 
+  backdrop-filter: blur(18px); 
+  -webkit-backdrop-filter: blur(18px);
+  
   box-sizing: border-box;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03); 
   transition: all 0.3s ease;
 }
 
-/* LOGO - TAMAÑO CORREGIDO (35px de altura y 18px de fuente) */
+
 .logo {
   display: flex;
   align-items: center;
   gap: 12px;
   color: #0f172a;
   font-weight: 800;
-  font-size: 18px; /* Texto refinado */
+  font-size: 18px;
   letter-spacing: -0.5px;
   cursor: pointer;
 }
@@ -35,7 +36,7 @@
 }
 
 .logo img {
-  height: 35px; /* <--- ESTA ES LA REGLA QUE FALTABA */
+  height: 35px; /* Tamaño ideal */
   width: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
@@ -54,7 +55,7 @@
 .navbar nav a {
   margin-left: 30px;
   text-decoration: none;
-  color: #475569;
+  color: #475569; 
   font-weight: 600;
   font-size: 15px;
   transition: 0.3s;
@@ -80,10 +81,12 @@
   box-shadow: 0 6px 20px rgba(18, 179, 182, 0.4);
 }
 
-/* HERO SECTION - UNIFICADO Y FULL-WIDTH */
+
 .hero {
-  background: #f8fafc;
-  padding-top: 70px; /* Ajustado al nuevo padding del navbar */
+
+  background: #ffffff; 
+  padding-top: 0; 
+  
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -93,12 +96,14 @@
 
 .carousel {
   position: relative;
-  width: 100%; /* Toma todo el ancho de la página */
-  margin: 0; /* Asegura que se extienda completamente */
-  height: 82vh; /* Se mantiene la altura premium */
+  width: 100%; 
+  margin: 0;
+  
+ 
+  height: 88vh; 
+  
   overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
-  /* Se eliminó border-radius: 32px para que se extienda a los bordes */
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08); 
 }
 
 .slide {
@@ -122,19 +127,20 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  animation: kenBurns 20s infinite alternate;
+  animation: kenBurns 22s infinite alternate; 
 }
 
 @keyframes kenBurns {
   from { transform: scale(1); }
-  to { transform: scale(1.15); }
+  to { transform: scale(1.18); } /* Un zoom ligeramente mayor */
 }
 
 .overlay {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: radial-gradient(circle, rgba(15, 23, 42, 0.3) 0%, rgba(15, 23, 42, 0.85) 100%);
+  
+  background: radial-gradient(circle, rgba(15, 23, 42, 0.25) 0%, rgba(15, 23, 42, 0.9) 100%);
 }
 
 /* CONTENIDO DEL HERO CENTRALIZADO */
@@ -151,23 +157,23 @@
   background: rgba(18, 179, 182, 0.15);
   backdrop-filter: blur(5px);
   color: #1ed7da;
-  padding: 8px 24px;
+  padding: 8px 26px; 
   border-radius: 50px;
   font-weight: 700;
   font-size: 13px;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.8px;
   display: inline-block;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
   border: 1px solid rgba(18, 179, 182, 0.3);
 }
 
 .carousel-text h1 {
-  font-size: clamp(38px, 6vw, 75px);
+  font-size: clamp(38px, 6vw, 78px); 
   line-height: 1.05;
   font-weight: 800;
-  margin-bottom: 25px;
-  letter-spacing: -2px;
+  margin-bottom: 28px;
+  letter-spacing: -2.5px;
 }
 
 .carousel-text h1 span {
@@ -175,10 +181,10 @@
 }
 
 .carousel-text p {
-  font-size: 1.25rem;
+  font-size: 1.3rem; 
   color: #e2e8f0;
-  margin: 0 auto 50px auto;
-  max-width: 680px;
+  margin: 0 auto 55px auto;
+  max-width: 700px;
   line-height: 1.7;
 }
 
@@ -192,19 +198,19 @@
   background: #12b3b6;
   color: white;
   border: none;
-  padding: 20px 45px;
-  border-radius: 16px;
+  padding: 22px 50px; /* <--- CAMBIO: Botón más grande y sustancial */
+  border-radius: 18px;
   font-weight: 700;
   font-size: 17px;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  box-shadow: 0 10px 30px rgba(18, 179, 182, 0.4);
+  box-shadow: 0 10px 35px rgba(18, 179, 182, 0.4);
 }
 
 .btn-primary:hover {
   background: #0e8f91;
   transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(18, 179, 182, 0.5);
+  box-shadow: 0 18px 45px rgba(18, 179, 182, 0.5);
 }
 
 /* FLECHAS */
@@ -212,11 +218,11 @@
   position: absolute;
   top: 50%;
   z-index: 20;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   color: white;
-  padding: 20px;
+  padding: 22px; /* Flechas más grandes */
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s;
@@ -224,12 +230,12 @@
 }
 
 .arrow:hover {
-  background: #12b3b6;
-  border-color: #12b3b6;
+  background: rgba(255,255,255,0.2);
+  border-color: rgba(255,255,255,0.2);
 }
 
-.left { left: 30px; }
-.right { right: 30px; }
+.left { left: 40px; } 
+.right { right: 40px; }
 
 /* DOTS */
 .dots {
@@ -238,11 +244,11 @@
 }
 
 .dots span {
-  height: 8px;
-  width: 8px;
+  height: 9px; 
+  width: 9px;
   background: #cbd5e1;
   display: inline-block;
-  margin: 0 6px;
+  margin: 0 7px;
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.4s ease;
@@ -250,36 +256,37 @@
 
 .dots span.active {
   background: #12b3b6;
-  width: 28px;
-  border-radius: 10px;
+  width: 32px; 
+  border-radius: 12px;
 }
 
 /* ANIMACIONES */
 @keyframes heroFadeUp {
-  from { opacity: 0; transform: translateY(50px); }
+  from { opacity: 0; transform: translateY(60px); } /* <--- CAMBIO: Movimiento de entrada más largo */
   to { opacity: 1; transform: translateY(0); }
 }
 
 /* RESPONSIVE */
 @media(max-width: 1024px) {
   .carousel-text { width: 85%; }
-  .navbar { padding: 12px 5%; }
+  .navbar { padding: 10px 5%; }
 }
 
 @media(max-width: 768px) {
   .navbar nav { display: none; } 
   .carousel {
-    height: 70vh; 
-    
+    height: 75vh; 
   }
-  .carousel-text h1 { font-size: 34px; letter-spacing: -1px; }
-  .carousel-text p { font-size: 16px; margin-bottom: 30px; }
-  .btn-primary { padding: 16px 32px; font-size: 15px; }
-  .arrow { padding: 15px; }
+  .carousel-text h1 { font-size: 36px; letter-spacing: -1.2px; }
+  .carousel-text p { font-size: 16px; margin-bottom: 35px; }
+  .btn-primary { padding: 18px 36px; font-size: 16px; }
+  .arrow { padding: 18px; }
+  .left { left: 20px; }
+  .right { right: 20px; }
 }
 
 @media(max-width: 480px) {
   .carousel {
-    height: 60vh; 
+    height: 65vh; 
   }
 }
